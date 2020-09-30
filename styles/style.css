@@ -72,6 +72,10 @@ h2 {
     font-weight: bold;
 }
 
+input[type="radio"]:checked {
+    transform: scale(2);
+}
+
 .gutter-right {
     margin-right: 20px;
 }

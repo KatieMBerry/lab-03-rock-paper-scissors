@@ -3,12 +3,10 @@
 GOAL: Let the user-player choose rock, paper, or scissors to play against the computer. Track total wins, losses and draws.
 
 STATE:
-    - rules
-    - throw result
-    - wins
-    - losses
-    - draws
-    - _(current user selection -- radio button does this)_
+- wins
+- losses
+- draws
+- _(current user selection -- radio button does this)_
 
 How do we SHOW this state?
 - display in divs' textContent property
