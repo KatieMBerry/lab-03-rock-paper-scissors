@@ -67,9 +67,19 @@ footer {
 }
 
 
-h2 {
+h1 {
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+input[type="radio"]:checked + img {
+    transform: scale(2);
+    border: solid 5px blue;	    
+    display: inline;
 }
 
 .gutter-right {
@@ -80,17 +90,21 @@ h2 {
     animation: pulse 5s infinite ease-in-out;
 }
 
+.rules {
+    display: inline;
+    padding: 50px;
+}
+
 header img {
     height: var(--header-height);
 }
-
-
 
 content {
     width: 80%;
 }
 
 p {
+    text-align: center;
     margin: var(--gutter);
 }
   
