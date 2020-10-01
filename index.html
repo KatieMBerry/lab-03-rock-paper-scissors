@@ -20,22 +20,37 @@
     </header>
     <main>
         <section class="main-section">
-            <p>Rules of the Game: Select one of the 3 images below.  When you've chosen your weapon, click the Shoot button.  See if you can beat the computer!</p>
+            <h1>Rules of the Game:</h2>
+                <p> Select one of the 3 images below.  When you've chosen your weapon, click the Shoot button.  See if you can beat the computer!</p>
+                <h2>
+                    <div class="rules">Rock Beats Scissors</div>
+                    <div class="rules">Paper Beats Rock</div>
+                    <div class="rules">Scissors Beats Paper</div>
+                </h2>
+            <label>    
             <input 
                 type="radio" 
                 name="rps" 
                 value="rock">
             <div>rock</div>
+            <img src="./assets/rock.PNG" alt="an angry rock">
+            </label>
+            <label>
             <input 
                 type="radio" 
                 name="rps" 
                 value="paper">
             <div>paper</div>
+            <img src="./assets/paper.PNG" alt="an angry paper">
+            </label>
+            <label> 
             <input 
                 type="radio" 
                 name="rps" 
                 value="scissors">
             <div>scissors</div>
+            <img src="./assets/scissors.PNG" alt="an angry scissors">
+            </label>
             <button id="shoot-button">SHOOT!</button>
             <div>
                 <span id="results-span"></span>
@@ -50,12 +65,6 @@
                 Draws:<span id="draws-span">0</span>
             </div>
             <button id="reset-button">RESET</button>
-
-
-
-
-
-
         </section>
     </main>
     <footer>

@@ -1,4 +1,5 @@
-// import functions and grab DOM elements
+import { getRandomThrow, doesUserWin} from './get-random-throw.js';
+
 const shootButton = document.querySelector('#shoot-button');
 const resetButton = document.querySelector('#reset-button');
 const resultsSpan = document.querySelector('#results-span');
@@ -6,51 +7,45 @@ const winSpan = document.querySelector('#wins-span');
 const lossesSpan = document.querySelector('#losses-span');
 const drawsSpan = document.querySelector('#draws-span');
 
-// initialize state
+
 let wins = 0;
 let losses = 0;
-let draws = 0;
+let draw = 0;
 
-// set event listeners to update state and DOM
 shootButton.addEventListener('click', () => {
-//computer will generate a throw
-    const randomThrow = Math.ceil(Math.random() * 3);
+    const computerThrow = getRandomThrow();
 
-//I need to compare this number to rock, paper, scissors.  Need to assign a numeric value to these values
-
-    let computerThrow;
-//If getRandomThrow is 1, will call it scissors
-//If it's 2, it's paper
-//If it's 3, it's rock
-
-    if (randomThrow === 1) {
-        computerThrow = 'scissors';
-    } else if (randomThrow === 2) {
-        computerThrow = 'paper';
-    } else {
-        computerThrow = 'rock';
-    }
-    
-//get the user's throw by seeing which radio button is checked
     const checkedButton = document.querySelector(':checked');
     const userThrow = checkedButton.value;
     
-//determine if the user draws
     if (userThrow === computerThrow) {
-        draws++;
+        draw++;
+
+        drawsSpan.textContent = draw;
         resultsSpan.textContent = 'You tied with the computer!';
-    }   console.log(userThrow, computerThrow);
-    //If the uer doesn't draw, then they won or lost:
-    // return doesUserWin;
+
+    } else if (doesUserWin(userThrow, computerThrow)) {
+        wins++;
+
+        winSpan.textContent = wins;
+        resultsSpan.textContent = 'You Won!';
+
+    } else if (!doesUserWin(userThrow, computerThrow)) {
+        losses++;
+
+        lossesSpan.textContent = losses;
+        resultsSpan.textContent = 'You Lose!';
+    } 
+    // console.log(userThrow, computerThrow);
 });
 
 resetButton.addEventListener('click', () => {
     wins = 0;
     losses = 0;
-    draws = 0;
+    draw = 0;
 
     winSpan.textContent = wins;
     lossesSpan.textContent = losses;
-    drawsSpan.textContent = draws;
+    drawsSpan.textContent = draw;
     resultsSpan.textContent = '';
 });
