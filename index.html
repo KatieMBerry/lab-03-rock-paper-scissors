@@ -13,57 +13,54 @@
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
-        </div>
-    </header>
     <main>
         <section class="main-section">
             <h1>Rules of the Game:</h2>
+                <br>
                 <p> Select one of the 3 images below.  When you've chosen your weapon, click the Shoot button.  See if you can beat the computer!</p>
+                <br>
                 <h2>
                     <div class="rules">Rock Beats Scissors</div>
                     <div class="rules">Paper Beats Rock</div>
                     <div class="rules">Scissors Beats Paper</div>
                 </h2>
-            <label>    
-            <input 
-                type="radio" 
-                name="rps" 
-                value="rock">
-            <div>rock</div>
-            <img src="./assets/rock.PNG" alt="an angry rock">
-            </label>
-            <label>
-            <input 
-                type="radio" 
-                name="rps" 
-                value="paper">
-            <div>paper</div>
-            <img src="./assets/paper.PNG" alt="an angry paper">
-            </label>
-            <label> 
-            <input 
-                type="radio" 
-                name="rps" 
-                value="scissors">
-            <div>scissors</div>
-            <img src="./assets/scissors.PNG" alt="an angry scissors">
-            </label>
+            <div>            
+                <label>    
+                    <input 
+                        type="radio" 
+                        name="rps" 
+                        value="rock"
+                        checked>
+                    <img src="./assets/rock.PNG" alt="an angry rock">
+                    <article>rock</article>
+                </label>
+                <label>
+                    <input 
+                        type="radio" 
+                        name="rps" 
+                        value="paper">
+                    <img src="./assets/paper.PNG" alt="an angry paper">
+                    <article>paper</article>
+                </label>
+                <label> 
+                    <input 
+                        type="radio" 
+                        name="rps" 
+                        value="scissors">
+                        <img src="./assets/scissors.PNG" alt="an angry scissors">
+                    <article>scissors</article>
+                </label>
+            </div>
             <button id="shoot-button">SHOOT!</button>
-            <div>
+            <article>
                 <span id="results-span"></span>
-            </div>
-            <div>
+            <br>
                 Wins:<span id="wins-span">0</span>
-            </div>
-            <div>
-                Losses:<span id="losses-span">0</span>
-            </div>
-            <div>
+            <br>    
+                Losses:<span id="losses-span">0</span>            
+            <br>
                 Draws:<span id="draws-span">0</span>
-            </div>
+            </article>
             <button id="reset-button">RESET</button>
         </section>
     </main>
