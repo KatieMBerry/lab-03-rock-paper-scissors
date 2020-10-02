@@ -36,7 +36,7 @@ shootButton.addEventListener('click', () => {
         lossesSpan.textContent = losses;
         resultsSpan.textContent = 'You Lose!';
     } 
-    // console.log(userThrow, computerThrow);
+//    console.log(userThrow, computerThrow);
 });
 
 resetButton.addEventListener('click', () => {
